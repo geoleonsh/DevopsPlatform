@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="运维开发管理平台">
+    <meta name="author" content="西窗浪人">
+    <title>{% block title %}运维开发管理平台{% endblock %}</title>
+    <link rel="icon" href="{{url_for('static',filename='images/fav.ico')}}">
+    {% block css %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+    {% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="{{url_for('login')}}">运维开发管理平台</a>
+        <!--<a onclick="">-->
+        <!--<img src="">-->
+        <!--</a>-->
+    </div>
+</nav>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">登&nbsp;&nbsp;录</h3>
+    </div>
+    <div class="panel-body">
+        <div class="login-form">
+            <form method="post" enctype="multipart/form-data">
+                {{form.hidden_tag()}}
+                <div class="input-group">
+                    <span class="input-group-addon">用户名</span>
+                    {{form.UserName}}
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">密码</span>
+                    {{form.PassWord}}
+                </div>
+
+                <div class="error">
+                    {% for msg in get_flashed_messages() %}
+                    <p>{{msg}}</p>
+                    {% endfor %}
+
+                    {% if form.errors.UserName %}
+                        {% for error in form.errors.UserName %}
+                        <p>{{error}}</p>
+                        {% endfor %}
+                    {% else %}
+                        {% for error in form.errors.PassWord %}
+                        <p>{{error}}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {{form.Submit}}
+            </form>
+        </div>
+    </div>
+
+
+</div>
+<script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+</body>
+</html>

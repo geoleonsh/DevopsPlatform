@@ -1,0 +1,25 @@
+div.page-header{
+    text-align: center;
+}
+
+div.panel{
+    text-align: center;
+    width: 400px;
+    margin: 160px auto;
+}
+
+div.input-group{
+    margin: 40px auto;
+}
+
+body{
+    background:#D3D3D3;
+}
+
+div.error{
+    height: 40px;
+}
+p {
+    color: #c12e2a;
+    font-size: 16px;
+}
