@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="运维开发管理平台">
-    <meta name="author" content="西窗浪人">
-    <title>{% block title %}运维开发管理平台{% endblock %}</title>
-    <link rel="icon" href="{{url_for('static',filename='images/fav.ico')}}">
-    {% block css %}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
-    {% endblock %}
-</head>
-<body>
-<nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{url_for('login')}}">运维开发管理平台</a>
-        <!--<a onclick="">-->
-        <!--<img src="">-->
-        <!--</a>-->
-    </div>
-</nav>
-
+{% extends 'base.html' %}
+{% block content %}
 <div class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">登&nbsp;&nbsp;录</h3>
@@ -57,10 +36,5 @@
             </form>
         </div>
     </div>
-
-
 </div>
-<script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
-</body>
-</html>
+{% endblock %}
