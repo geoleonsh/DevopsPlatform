@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, redirect, url_for, flash
-from flask_login import LoginManager, login_required, current_user, login_user
+from flask_login import LoginManager, login_required, current_user, login_user, logout_user
 from config import MainConfig
 from forms import LoginForm
 from user import User
@@ -42,6 +42,13 @@ def login():
 @login_required
 def index():
     return render_template('index.html')
+
+
+@app.route('/logout/')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 
 
 if __name__ == '__main__':
