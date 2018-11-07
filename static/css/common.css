@@ -12,6 +12,10 @@ div.input-group{
     margin: 40px auto;
 }
 
+html,body{
+    height: 100%;
+}
+
 body{
     background:#D3D3D3;
 }
@@ -32,6 +36,7 @@ div.footer{
     line-height: 16px;
     font-size: 14px;
     padding: 10px;
+    height: 5%;
 }
 
 div.navbar-header{
@@ -45,3 +50,8 @@ div.navbar-header .user-info{
     padding: 15px;
     line-height: 20px;
 }
+
+a,a:hover{
+    text-decoration: none;
+}
+
