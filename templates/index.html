@@ -13,31 +13,110 @@
             <ul>
                 <li class="cpanel">
                 <a class="list-group-item active">前端管理</a>
-                <a href="#" class="list-group-item">前端分支管理</a>
+                <a href="{{url_for('action',operation='webbranch')}}" class="list-group-item">前端分支管理</a>
                 </li>
                 <li class="cpanel">
                     <a class="list-group-item active">JAVA包管理</a>
-                    <a href="#" class="list-group-item">测试环境WAR包发布</a>
+                    <a href="{{url_for('action',operation='java')}}" class="list-group-item">测试环境WAR包发布</a>
                 </li>
                 <li class="cpanel">
                     <a class="list-group-item active">用户管理</a>
-                    <a href="#" class="list-group-item">用户列表</a>
-                    <a href="#" class="list-group-item">增加用户</a>
-                    <a href="#" class="list-group-item">删除用户</a>
-                    <a href="#" class="list-group-item">修改用户</a>
+                    <a href="{{url_for('action',operation='listuser')}}" class="list-group-item">用户列表</a>
+                    <a href="{{url_for('action',operation='adduser')}}" class="list-group-item">增加用户</a>
+                    <a href="{{url_for('action',operation='deluser')}}" class="list-group-item">删除用户</a>
+                    <a href="{{url_for('action',operation='modifyuser')}}" class="list-group-item">修改用户</a>
                 </li>
                 <li class="cpanel">
                     <a class="list-group-item active">角色管理</a>
-                    <a href="#" class="list-group-item">权限列表</a>
-                    <a href="#" class="list-group-item">用户授权</a>
+                    <a href="{{url_for('action',operation='authority')}}" class="list-group-item">权限列表</a>
+                    <a href="{{url_for('action',operation='grant')}}" class="list-group-item">用户授权</a>
                 </li>
             </ul>
         </div>
         <div class="author">
-
+            <p><a href="https://github.com/geoleonsh/DevopsPlatform" target="_blank">Developer:Geoleonsh</a></p>
         </div>
     </div>
     <div class="content">
+        {% if view == 'default' %}
+            <div class="welcome">
+                <span>欢迎登录开发管理系统控制台</span>
+            </div>
+        {% endif %}
+        {% if view == 'preview' %}
+        <div class="preview">
+            <span>相关功能暂未开发完成，敬请期待</span>
+            <img src="{{url_for('static',filename='images/pre.jpg')}}" style="width: 600px"/>
+        </div>
+        {% endif %}
+        {% if view == 'webbranch' %}
+        <div class="webbranch">
+            <form method="post" enctype="multipart/form-data">
+            <table class="web">
+                <tr class="tr1">
+                    <td class="td1">前端工程名</td>
+                    <td class="td2">当前分支</td>
+                    <td class="td3">修改分支</td>
+                    <td class="td4">操作</td>
+                </tr>
+                <tr>
+                    <td class="td1">yicunh5</td>
+                    <td class="td2">未获取</td>
+                    <td class="td3"><input type="text" name="" title="分支名称"></td>
+                    <td class="td4">
+                        <button class="btn btn-info" name="yicunh5-branch">当前</button>
+                        <button class="btn btn-primary" name="yicunh5-change">更改</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">bigh5</td>
+                    <td class="td2">未获取</td>
+                    <td class="td3"><input type="text" name="" title="分支名称"></td>
+                    <td class="td4">
+                        <button class="btn btn-info" name="yicunh5-branch">当前</button>
+                        <button class="btn btn-primary" name="yicunh5-change">更改</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">chuanke</td>
+                    <td class="td2">未获取</td>
+                    <td class="td3"><input type="text" name="" title="分支名称"></td>
+                    <td class="td4">
+                        <button class="btn btn-info" name="yicunh5-branch">当前</button>
+                        <button class="btn btn-primary" name="yicunh5-change">更改</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">xlyz</td>
+                    <td class="td2">未获取</td>
+                    <td class="td3"><input type="text" name="" title="分支名称"></td>
+                    <td class="td4">
+                        <button class="btn btn-info" name="yicunh5-branch">当前</button>
+                        <button class="btn btn-primary" name="yicunh5-change">更改</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">library</td>
+                    <td class="td2">未获取</td>
+                    <td class="td3"><input type="text" name="" title="分支名称"></td>
+                    <td class="td4">
+                        <button class="btn btn-info" name="yicunh5-branch">当前</button>
+                        <button class="btn btn-primary" name="yicunh5-change">更改</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1">gwh5</td>
+                    <td class="td2">未获取</td>
+                    <td class="td3"><input type="text" name="" title="分支名称"></td>
+                    <td class="td4">
+                        <button class="btn btn-info" name="yicunh5-branch">当前</button>
+                        <button class="btn btn-primary" name="yicunh5-change">更改</button>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+        {% endif %}
 
     </div>
 </div>

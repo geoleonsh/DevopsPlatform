@@ -9,3 +9,7 @@ class LoginForm(FlaskForm):
     PassWord = PasswordField('密码', validators=[DataRequired(message='密码必填'), Length(6, 20, message='密码长度为8到20之间')],
                              render_kw={"class": "form-control"})
     Submit = SubmitField('登录', render_kw={"class": "btn btn-primary"})
+
+
+class BranchForm(FlaskForm):
+    Yicunh5 = StringField('yicunh5分支')

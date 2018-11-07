@@ -31,3 +31,80 @@ li.cpanel {
     display: inline;
     margin-top: 10px;
 }
+
+div.author{
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.welcome{
+    text-align: center;
+    width: 80%;
+    height: 90%;
+    background: url("../images/welcome.jpg") no-repeat;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: #2aabd2;
+    font-size: 30px;
+}
+
+div.preview{
+    text-align: center;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: #2aabd2;
+    font-size: 30px;
+}
+
+div.preview img{
+    margin: 0 auto;
+}
+
+div.preview span{
+    float: left;
+    width: 100%;
+}
+
+div.webbranch{
+    text-align: center;
+}
+
+table.web{
+    margin: 0 auto;
+}
+
+td{
+    width: 3%;
+    height: 60px;
+    /*line-height: 60px;*/
+    font-size: 24px;
+    border-bottom: 1px solid #000000 ;
+    border-left: 1px solid #000000 ;
+}
+
+td.td1{
+    background: #337ab7;
+}
+
+td.td2{
+    background: #3c763d;
+}
+
+td.td3{
+    background: #D3D3D3;
+}
+
+td.td4{
+    background: #9acfea;
+    border-right: 1px solid #000000;
+}
+
+tr.tr1{
+    border-top: 1px solid #000000;;
+}
+
+button{
+    margin: 0 12px;
+}
